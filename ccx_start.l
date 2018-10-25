@@ -26,6 +26,7 @@ ID       [a-z][_a-z0-9]*
 NUMLIT   [0-9][0-9a-fA-F_.#]*
 CHARLIT  ['][A-Za-z][']
 STRING   [\"][^\"]*[\"]
+COMMENT  [\/][\*].*[\*][\/]
 %%
     /*
      * This is the rules section.  It starts with the %% above and continues
@@ -50,6 +51,8 @@ STRING   [\"][^\"]*[\"]
 {CHARLIT} { printf("%s (char-lit)\n", yytext); }
 
 {STRING} { printf("%s (string)\n", yytext);}
+
+{COMMENT} { printf("%s (comment)\n", yytext);}
 
 accessor |
 and |
