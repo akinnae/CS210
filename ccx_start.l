@@ -25,6 +25,7 @@ HEXD     [A-Fa-f]
 ID       [a-z][_a-z0-9]*
 NUMLIT   [0-9][0-9a-fA-F_.#]*
 CHARLIT  ['][A-Za-z][']
+STRING   [\"][^\"]*[\"]
 %%
     /*
      * This is the rules section.  It starts with the %% above and continues
@@ -47,6 +48,8 @@ CHARLIT  ['][A-Za-z][']
 {NUMLIT} { printf("%s (num-lit)\n", yytext); }
 
 {CHARLIT} { printf("%s (char-lit)\n", yytext); }
+
+{STRING} { printf("%s (string)\n", yytext);}
 
 accessor |
 and |
