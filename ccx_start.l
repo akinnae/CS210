@@ -88,7 +88,7 @@ while {
      
 {ID}        printf("%s (identifier)\n", yytext);
      
-"+"|";"|"-"|"*"|"/"   printf("%s (operator)\n", yytext);
+"."|"<"|">"|"("|")"|"+"|"-"|"*"|"/"|"|"|"&"|";"|","|":"|"["|"]"|"="|":="|".."|"<<"|">>"|"<>"|"<="|">="|"**"|"!="|"=>"   printf("%s (operator)\n", yytext);
      
 [ \t\n]+          /* discard whitespace */
      
