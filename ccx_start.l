@@ -26,7 +26,7 @@ ID       [a-z][_a-z0-9]*
 NUMLIT   [0-9][0-9a-fA-F_.#]*
 CHARLIT  ['][A-Za-z][']
 STRING   [\"][^\"]*[\"]
-COMMENT  [\/][\*].*[\*][\/]
+COMMENT  [\/][\*](([^\*][^\/])|([^\*].)|(.[^\/])|\n)*[\*][\/]
 %%
     /*
      * This is the rules section.  It starts with the %% above and continues
