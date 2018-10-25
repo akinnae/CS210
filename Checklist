@@ -4,8 +4,8 @@ DONE:
   identifier
   operator
   char-lit
+  string
   
 TO DO:
   comment
-  string
   
