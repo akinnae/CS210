@@ -3,9 +3,9 @@ DONE:
   num-lit
   identifier
   operator
+  char-lit
   
 TO DO:
   comment
   string
-  char-lit
   
