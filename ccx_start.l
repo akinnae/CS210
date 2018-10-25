@@ -22,11 +22,11 @@
      */
 DIGIT    [0-9]
 HEXD     [A-Fa-f]
-ID       [a-z][_a-z0-9]*
+ID       [A-Za-z][_A-Za-z0-9]*
 NUMLIT   [0-9][0-9a-fA-F_.#]*
 CHARLIT  ['][A-Za-z][']
 STRING   [\"][^\"]*[\"]
-COMMENT  [\/][\*](([^\*][^\/])|([^\*].)|(.[^\/])|\n)*[\*][\/]
+COMMENT  "/*"([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*"*/"
 %%
     /*
      * This is the rules section.  It starts with the %% above and continues
